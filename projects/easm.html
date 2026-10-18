@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>External Attack Surface Management — Case Study · Abdulmuiz Annafi</title>
+  <meta name="description" content="A multi-client platform that discovers an organisation's external footprint and correlates it against live vulnerability feeds." />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="nav is-stuck" id="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__home" aria-label="Home">← Home</a>
+      <div class="nav__actions" style="margin-left:auto">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container case">
+    <a href="../index.html#work" class="case__back">← all work</a>
+    <h1 class="case__title">External Attack Surface Management</h1>
+    <p class="case__sub">A multi-client platform that continuously maps what an organisation exposes to the internet, and what of it is actually exploitable.</p>
+    <div class="case__meta chips"><span>React</span><span>FastAPI</span><span>Python</span><span>NIST NVD</span><span>CISA KEV</span></div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 820 170" role="img" aria-label="EASM flow">
+        <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" class="dg-arrow"/></marker></defs>
+        <text x="10" y="16" class="dg-note">DISCOVER → CORRELATE → PRIORITISE → SURFACE</text>
+        <rect class="dg-box--a" x="10" y="50" width="170" height="72" rx="6"/>
+        <text x="95" y="82" text-anchor="middle" class="dg-label">discover</text>
+        <text x="95" y="100" text-anchor="middle" class="dg-sub">external footprint</text>
+        <rect class="dg-box" x="210" y="50" width="170" height="72" rx="6"/>
+        <text x="295" y="82" text-anchor="middle" class="dg-label">correlate</text>
+        <text x="295" y="100" text-anchor="middle" class="dg-sub">nvd · cisa kev</text>
+        <rect class="dg-box" x="410" y="50" width="150" height="72" rx="6"/>
+        <text x="485" y="82" text-anchor="middle" class="dg-label">prioritise</text>
+        <text x="485" y="100" text-anchor="middle" class="dg-sub">exploitable first</text>
+        <rect class="dg-box--a" x="590" y="50" width="180" height="72" rx="6"/>
+        <text x="680" y="82" text-anchor="middle" class="dg-acc">dashboard</text>
+        <text x="680" y="100" text-anchor="middle" class="dg-sub">real-time, per client</text>
+        <line class="dg-edge" x1="180" y1="86" x2="206" y2="86" marker-end="url(#ar)"/>
+        <line class="dg-edge" x1="380" y1="86" x2="406" y2="86" marker-end="url(#ar)"/>
+        <line class="dg-edge" x1="560" y1="86" x2="586" y2="86" marker-end="url(#ar)"/>
+      </svg>
+      <figcaption class="diagram__cap">Discovery maps subdomains, exposed IPs, open ports, running services, and TLS certificates, then live feeds decide what matters.</figcaption>
+    </figure>
+
+    <div class="case__grid">
+      <div class="case__body">
+        <h2>The problem</h2>
+        <p>You cannot defend what you cannot see. Organisations accumulate forgotten subdomains, exposed services, and expired certificates faster than anyone tracks them, and a scanner that dumps thousands of findings without priority is just a different kind of blindness. The question is not what is exposed, it is what is exposed and exploitable right now.</p>
+
+        <h2>What I built</h2>
+        <p>A multi-client platform that continuously discovers an organisation's external footprint, subdomains, exposed IPs, open ports, running services, and TLS certificates, and correlates every finding against live NIST NVD and CISA KEV data to surface prioritised, exploitable vulnerabilities in real time.</p>
+        <ul>
+          <li>An analytics dashboard with CVE trend visualisation and real-time scan-job monitoring, so a SOC team has an always-on view of each client's attack surface.</li>
+          <li>Bulk vulnerability status workflows, so triage scales past the single-finding click.</li>
+          <li>Prioritisation by exploited status, not raw severity, which is what pulls mean time to remediation down.</li>
+        </ul>
+
+        <h2>The result</h2>
+        <p>The platform turns an unbounded list of exposures into a short, ranked list of things worth fixing first. That ranking is the product, discovery is table stakes, and deciding what to do with it is where the value sits.</p>
+      </div>
+
+      <aside class="aside">
+        <h3>At a glance</h3>
+        <dl>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Type</dt><dd>Multi-client platform</dd></div>
+          <div><dt>Role</dt><dd>Full-stack design &amp; build</dd></div>
+          <div><dt>Stack</dt><dd>React, FastAPI, Python, NVD, CISA KEV</dd></div>
+        </dl>
+        <div class="aside__links">
+          <a href="mailto:oladipupoabdulmuiz@gmail.com?subject=EASM%20Platform">discuss this →</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="case__foot">
+      <a href="../index.html#work">← all work</a>
+      <a href="cyber-risk.html">next: Cyber Risk Quantification →</a>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
