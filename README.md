@@ -4,7 +4,7 @@ Hand-built static portfolio. No framework, no template. Pure HTML, CSS, and vani
 
 ## Run it locally
 Open the folder in VS Code and click **Go Live** (Live Server extension), or just double-click `index.html`.
-Live Server is better because the relative links to `projects/` work exactly like they will on GitHub Pages.
+Live Server is better because the relative links to `projects/`.
 
 ## Structure
 ```
@@ -25,11 +25,3 @@ Portfolio/
 - Filterable project grid (All / Detection / AI / Platforms / Crypto)
 - Typed hero subtitle
 
-## To make it yours
-- **Screenshots:** drop images in `assets/img/` and replace the placeholder blocks (search for `shot` in the case page, and the `card__media` blocks in `index.html`).
-- **Résumé:** put your PDF at `assets/Abdulmuiz-Annafi-Resume.pdf` (the Contact button already points there).
-- **Writing links:** the three Writing cards point to your LinkedIn profile for now. Swap the `href` for the exact post URLs when you want.
-- **More case studies:** copy `projects/sidedoor.html`, rename, edit, and link it from the matching project card.
-
-## Deploy (when ready)
-Push to a repo named `Abdulmuiz635.github.io` and enable GitHub Pages. It serves at `https://abdulmuiz635.github.io`.
